@@ -14,6 +14,7 @@ public class TheGameOfNim
     {
         startupUI = _startupUI;
 
+        //can probably get rid of this, check it out later
         player1 = new Player(startupUI.player1NameInput.getText());
         player2 = new Player(startupUI.player2NameInput.getText());
     }
@@ -21,6 +22,10 @@ public class TheGameOfNim
     public static void Play()
     {
         if(gameUI == null)gameUI = new NimGameUI();
+
+        //get player names
+        player1 = new Player(startupUI.player1NameInput.getText());
+        player2 = new Player(startupUI.player2NameInput.getText());
 
         //pick random starting player
         if(Math.random() > .5) currentPlayer = player1;
@@ -72,6 +77,7 @@ class NimGameUI
         button3.addActionListener( evt -> {TheGameOfNim.currentPlayer.TakeTurn(3); });
         panel.add(button3);
 
+        //holy moly 
         flagsDisplayArea = new JTextArea();
         flagsDisplayArea.setEditable(false);
         flagsDisplayArea.setBounds(110,35,400,200);
@@ -93,5 +99,7 @@ class NimGameUI
         popupBox.setLocationRelativeTo(null);
         popupBox.setResizable(false);
         popupBox.setVisible(true);
+
+        //lets use a grid layout group for this part
     }
 }
