@@ -19,7 +19,8 @@ public class Player
             TheGameOfNim.currentPlayer.UpdateScore();
             NimRunner.EndGame();
         }
-
+        
+        //in the future, put this player switching in game of nim
         if(TheGameOfNim.currentPlayer == TheGameOfNim.player1)
             TheGameOfNim.currentPlayer = TheGameOfNim.player2;
         else
