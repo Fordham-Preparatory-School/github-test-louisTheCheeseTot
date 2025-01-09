@@ -13,6 +13,9 @@ public class Password
 
     public boolean isValid(String password)
     {
+        //this seems like a very convoluted way of checking if the password is valid...
+        //any suggestions ?
+        
         int validChecksPassed = 0;
 
         if(password.length() > minLength && password.length() < maxLength)
